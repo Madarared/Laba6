@@ -22,19 +22,26 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Create gh-pages branch
+      - name: Set Git Config
+        run: |
+          git config user.email "you@example.com"
+          git config user.name "Your Name"
+
+      - name: Create and Switch to gh-pages Branch
         run: |
           git checkout --orphan gh-pages
-          git rm -rf .
-          touch .nojekyll
-          git add .nojekyll
-          git commit -m "Initialize gh-pages branch"
-          git push origin gh-pages
-          git checkout main
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          publish_branch: gh-pages
+      - name: Copy build files to gh-pages branch
+        run: |
+          cp -r ./build/* .
+
+      - name: Commit and Push Changes
+        run: |
+          git add -A
+          git commit -m "Deploy to GitHub Pages"
+          git push origin gh-pages
+
+      - name: Clean up
+        run: |
+          git checkout main
+          git branch -D gh-pages
