@@ -4,7 +4,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/NikrOKvillon/TP_Laba6.git"
+    "url": "https://github.com/Madarared/Laba6.git"
     },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
