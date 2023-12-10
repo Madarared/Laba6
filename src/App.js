@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const greeting = "Салов А.К.";
 
-  /*console.log('This is App ');*/
+  /*console.log('This is App ')//////;*/
   return (
     <div className="App">
      <header className="App-header">
@@ -16,3 +16,4 @@ function App() {
 }
 
 export default App;
+/*fff*/

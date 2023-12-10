@@ -6,8 +6,6 @@
     "type": "git",
     "url": "https://github.com/Madarared/Laba6.git"
     },
-
-  "homepage": "https://madarared.github.io/Laba5/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -45,12 +43,11 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@semantic-release/changelog": "6.0.3",
-    "@semantic-release/commit-analyzer": "^11.1.0",
-    "@semantic-release/github": "^9.2.5",
-    "@semantic-release/release-notes-generator": "^12.1.0",
+    "@semantic-release/commit-analyzer": "^11.0.0",
+    "@semantic-release/github": "^9.2.1",
+    "@semantic-release/release-notes-generator": "^12.0.0",
     "eslint": "^8.50.0",
-    "semantic-release": "^22.0.10"
+    "semantic-release": "^22.0.5"
   }
 }
